@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+	<head>	
+		<meta charset="utf-8">
+		<title> Mi Segunda WEB </title>
+	</head>
+		
+	<body>
+
+		<h1>1- Botones con acciones y mensajes:</h1>
+
+		<button>Botón Básico</button>
+		<br><br>
+
+		<button onclick="accion_1()" id="Bt1"> Botón 1 </button> <br><br>
+		<button onclick="accion_2()" id="Bt2"> Botón 2 </button> <br><br>
+		<button onclick="accion_3()" id="Bt3"> Botón 3 </button> <br><br>
+
+		<h1>2- Despliegue de datos:</h1>
+		<p>A continuación solicitaremos unos datos personales, gracias bb (*/ω＼*).</p>
+
+		Primer nombre: <input type="text" name="Recibir texto 1" id="Tx_1"> <wbr>
+		Segundo nombre: <input type="t	ext" name="Recibir texto 2" id="Tx_2"> <br><br><wbr>
+		Primer apellido: <input type="text" name="Recibir texto 3" id="Tx_3"> <wbr>
+		Segundo apellido: <input type="text" name="Recibir texto 4" id="Tx_4"> <br>
+		<br><br>
+		<button onclick="accion_4()" id="Bt4"> Concatenar </button>
+		<br><br>
+		Nombre Completo:&nbsp;<output id="Out1"> </output>
+
+		<style type="text/css">
+
+			body{
+				background-image: url(fondoxd.jpg);
+				background-repeat: round;
+				color: rgb(140,148,236);
+			}
+
+			h1{color: rgb(42,71,117);} 
+			h1{color: rgb(42,71,117);}
+
+			#Out1{color: rgba(255, 255, 255, 1);}
+
+
+		</style>
+
+		<script type="text/javascript">
+
+			function accion_1()
+			{
+				alert("boton 1 hola")
+			}
+
+			function accion_2()
+			{
+				confirm("boton 1 hola")
+			}
+
+			function accion_4()
+			{
+				var nombreCompleto= document.getElementById("Tx_1").value+" "+
+									document.getElementById("Tx_2").value+" "+
+									document.getElementById("Tx_3").value+" "+
+									document.getElementById("Tx_4").value
+				alert(nombreCompleto)
+				document.getElementById("Out1").innerHTML=nombreCompleto
+
+			}
+
+
+		</script>
+		
+	</body>
+
+</html>
